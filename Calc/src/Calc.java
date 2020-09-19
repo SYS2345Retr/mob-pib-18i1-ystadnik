@@ -7,6 +7,7 @@ public class Calc {
             System.out.println("Incorrect arguments length");
             return;
         }
+
         try {
             double x = Double.parseDouble(args[0]);
             char operation = args[1].charAt(0);
