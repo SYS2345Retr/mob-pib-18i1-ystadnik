@@ -2,10 +2,8 @@ import java.util.Scanner;
 
 public class Calc {
 
-    public static void main(String[] argsOrignal) {
+    public static void main(String[] args) {
         try {
-            String charline = "-1.5 + 1e-02";
-            String[] args = charline.split(" ");
             double x = Double.parseDouble(args[0]);
             char operation = args[1].charAt(0);
             double y = Double.parseDouble(args[2]);
