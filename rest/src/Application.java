@@ -1,3 +1,6 @@
+import ru.sibadi.rest.Food;
+import ru.sibadi.rest.Rest;
+
 import java.util.Scanner;
 
 enum TableStatus {FREE, RESERVED}

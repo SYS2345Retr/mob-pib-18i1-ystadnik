@@ -1,3 +1,5 @@
+package ru.sibadi.rest;
+
 public class Rest {
     private final String name;
     private final Food[] menu;

@@ -1,3 +1,5 @@
+package ru.sibadi.rest;
+
 public class Food {
     private final String title;
     private final double price;
