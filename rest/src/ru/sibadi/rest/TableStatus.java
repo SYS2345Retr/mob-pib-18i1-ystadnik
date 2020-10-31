@@ -1,3 +1,3 @@
 package ru.sibadi.rest;
 
-enum TableStatus {FREE, RESERVED};
+public enum TableStatus {FREE, RESERVED};

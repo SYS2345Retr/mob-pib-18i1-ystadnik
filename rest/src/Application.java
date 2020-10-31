@@ -1,11 +1,14 @@
 import ru.sibadi.rest.Food;
 import ru.sibadi.rest.Rest;
 import ru.sibadi.rest.Table;
+import ru.sibadi.rest.TableStatus;
 
 import java.util.Scanner;
 
 
 public class Application {
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Rest rest = new Rest();
@@ -19,6 +22,7 @@ public class Application {
             System.out.println("3: Looking the map tables");
             System.out.println("4: Exit");
             pointMenu = sc.nextInt();
+            sc.nextLine();
             switch (pointMenu) {
                 case 1:
                     for (Food food : rest.getMenu()) {
@@ -26,7 +30,14 @@ public class Application {
                     }
                     break;
                 case 2: {
-                    System.out.println();
+
+                    System.out.println("Enter a name table");
+                    String tableName = sc.nextLine();
+                    for (Table table : rest.getTables()) {
+                        if (table.getNameTable().equals(tableName)){
+                            table.setStatus(TableStatus.RESERVED);
+                        }
+                    }
 
                 }
                 break;
