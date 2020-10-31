@@ -1,7 +1,4 @@
-import ru.sibadi.rest.Food;
-import ru.sibadi.rest.Rest;
-import ru.sibadi.rest.Table;
-import ru.sibadi.rest.TableStatus;
+import ru.sibadi.rest.*;
 
 import java.util.Scanner;
 
@@ -34,11 +31,22 @@ public class Application {
                     System.out.println("Enter a name table");
                     String tableName = sc.nextLine();
                     for (Table table : rest.getTables()) {
-                        if (table.getNameTable().equals(tableName)){
+                        if (table.getNameTable().equals(tableName)) {
                             table.setStatus(TableStatus.RESERVED);
                         }
                     }
-
+                    System.out.println("Select food");
+                    for (Food food : rest.getMenu()) {
+                        System.out.println(food);
+                    }
+                    System.out.println("Enter food name");
+                    String menu = sc.nextLine();
+                    for (Food food : rest.getMenu()) {
+                        if (food.getTitle().equals(menu)) {
+                            Order o = new Order(food);
+                            System.out.println("Your order " + o);
+                        }
+                    }
                 }
                 break;
                 case 3: {
