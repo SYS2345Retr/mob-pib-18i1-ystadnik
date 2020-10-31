@@ -1,14 +1,15 @@
 import ru.sibadi.rest.Food;
 import ru.sibadi.rest.Rest;
+import ru.sibadi.rest.Table;
 
 import java.util.Scanner;
 
-enum TableStatus {FREE, RESERVED}
 
 public class Application {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Rest rest = new Rest();
+
         System.out.println("Welcome to " + rest.getName() + '\n');
 
         int pointMenu;
@@ -23,9 +24,18 @@ public class Application {
                     for (Food food : rest.getMenu()) {
                         System.out.println(food);
                     }
-                case 2:
-                case 3:
+                    break;
+                case 2: {
+                    System.out.println();
 
+                }
+                break;
+                case 3: {
+                    for (Table tables : rest.getTables()) {
+                        System.out.println(tables);
+                    }
+                    break;
+                }
             }
 
         } while (pointMenu != 4);
