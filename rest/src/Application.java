@@ -1,12 +1,12 @@
 import ru.sibadi.rest.*;
 
 import java.util.Scanner;
-
+import java.io.*;
 
 public class Application {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
         Scanner sc = new Scanner(System.in);
         Rest rest = new Rest();
 
@@ -17,7 +17,9 @@ public class Application {
             System.out.println("1: Looking restoraunt menu");
             System.out.println("2: Make a reservation table");
             System.out.println("3: Looking the map tables");
-            System.out.println("4: Exit");
+            System.out.println("4: StreamFile - write");
+            System.out.println("5: StreamFile - read");
+            System.out.println("6: Exit");
             pointMenu = sc.nextInt();
             sc.nextLine();
             switch (pointMenu) {
@@ -45,6 +47,7 @@ public class Application {
                         if (food.getTitle().equals(menu)) {
                             Order o = new Order(food);
                             System.out.println("Your order " + o);
+
                         }
                     }
                 }
@@ -54,12 +57,23 @@ public class Application {
                         System.out.println(tables);
                     }
                     break;
+
                 }
+                case 4: {
+                   StreamFile streamFile = new StreamFile();
+                   streamFile.SereLiz();
+
+                }break;
+                case 5:{
+                    StreamFile streamFile = new StreamFile();
+                    streamFile.Ser();
+                }break;
             }
 
-        } while (pointMenu != 4);
+        } while (pointMenu != 6);
 
 
     }
+
 }
 
