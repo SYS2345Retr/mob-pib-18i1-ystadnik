@@ -1,5 +1,4 @@
 package ru.sibadi.rest;
-
 import java.io.*;
 public class StreamFile {
     public void SereLiz(){
@@ -14,14 +13,11 @@ public class StreamFile {
         catch(IOException ex){
             System.out.println(ex.getMessage());
         }
-
-
     }
     public void Ser() {
         try(FileInputStream menu = new FileInputStream("src/ru/sibadi/rest/menu.txt"))
         {
             System.out.printf("File size: %d bytes \n", menu.available());
-
             int i=-1;
             while((i=menu.read())!=-1){
 
@@ -29,7 +25,6 @@ public class StreamFile {
             }
         }
         catch(IOException ex){
-
             System.out.println(ex.getMessage());
         }
     }
