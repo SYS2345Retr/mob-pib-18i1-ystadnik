@@ -12,6 +12,8 @@ public class StreamFile {
             for (Food food : rest.getMenu()) {
                 String name = food.getTitle();
                 String price = String.valueOf(food.getPrice());
+
+
                 writer.write(name + " " + price + File.separator);
             }
         } catch (IOException ex) {
