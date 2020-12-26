@@ -1,4 +1,4 @@
-package com.example.raynurscalculator;
+package com.example.stadnikcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
