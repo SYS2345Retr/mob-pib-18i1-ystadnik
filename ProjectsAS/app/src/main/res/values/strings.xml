@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Raynur\'s Calculator</string>
+    <string name="app_name">Stadnik\'s Calculator</string>
     <string name="ButtonCalc">Вычислить</string>
     <string name="TextView">Введите выражение:</string>
     <string name="TextViewResult">= </string>
